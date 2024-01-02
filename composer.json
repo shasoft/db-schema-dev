@@ -1,0 +1,33 @@
+{
+    "name": "shasoft/db-schema-dev",
+    "type": "library",
+    "description": "Package debug package shasoft/db-schema",
+    "keywords": [
+        "database",
+        "schema",
+        "migration",
+        "versioning",
+        "documentation",
+        "debug"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shasoft\\DbSchemaDev\\": "classes"
+        }
+    },
+    "require": {
+        "shasoft/db-schema": "*",
+        "shasoft/db-tool": "*",
+        "shasoft/filesystem": "*",
+        "shasoft/reflection": "*",
+        "twig/twig": "^3.0"
+    },
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Shabanov Valera",
+            "email": "shasoft_db-schema-dev@shasoft.com"
+        }
+    ]
+}
