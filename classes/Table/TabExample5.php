@@ -9,7 +9,7 @@ use Shasoft\DbSchema\Command\Create;
 use Shasoft\DbSchema\Index\IndexKey;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\MaxValue;
 use Shasoft\DbSchema\Command\MinValue;
 use Shasoft\DbSchema\Column\ColumnReal;
@@ -21,10 +21,10 @@ use Shasoft\DbSchema\Column\ColumnBoolean;
 use Shasoft\DbSchema\Column\ColumnInteger;
 use Shasoft\DbSchema\Command\DefaultValue;
 
-#[Comment('Таблица для примера')]
+#[Title('Таблица для примера')]
 class TabExample5
 {
-    #[Comment('Рост человека, мм')]
+    #[Title('Рост человека, мм')]
     #[MinValue(0)]
     #[MaxValue(4009)]
     #[DefaultValue(1800)]

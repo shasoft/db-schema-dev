@@ -7,7 +7,7 @@ use Shasoft\DbSchema\Tests\EnumInt;
 use Shasoft\DbSchema\Index\IndexKey;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\MaxValue;
 use Shasoft\DbSchema\Command\MinValue;
 use Shasoft\DbSchema\Command\Variable;
@@ -26,7 +26,7 @@ use Shasoft\DbSchema\Column\ColumnBoolean;
 use Shasoft\DbSchema\Column\ColumnDecimal;
 use Shasoft\DbSchema\Column\ColumnInteger;
 
-#[Comment('Таблица всех индексов')]
+#[Title('Таблица всех индексов')]
 class AllIndexes
 {
     // Поля

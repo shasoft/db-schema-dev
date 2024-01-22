@@ -9,7 +9,7 @@ use Shasoft\DbSchema\Table\Table;
 use Shasoft\Filesystem\Filesystem;
 use Shasoft\Reflection\Reflection;
 use Shasoft\DbSchema\Column\Column;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\DbSchemaCommands;
 use Shasoft\DbSchema\Relation\Relation;
 use Shasoft\DbSchema\Reference\Reference;

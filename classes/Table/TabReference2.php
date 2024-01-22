@@ -4,11 +4,11 @@ namespace Shasoft\DbSchemaDev\Table;
 
 use Shasoft\DbSchema\Command\Name;
 use Shasoft\DbSchema\Command\Migration;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\ReferenceTo;
 use Shasoft\DbSchema\Reference\Reference;
 
-#[Comment('Тестовая таблица 2')]
+#[Title('Тестовая таблица 2')]
 class TabReference2
 {
     #[ReferenceTo(TabReference1::class, 'id')]

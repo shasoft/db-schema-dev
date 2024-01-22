@@ -10,7 +10,7 @@ use Shasoft\DbSchema\Command\Create;
 use Shasoft\DbSchema\Index\IndexKey;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Column\ColumnReal;
 use Shasoft\DbSchema\Command\MaxLength;
 use Shasoft\DbSchema\Index\IndexPrimary;
@@ -18,20 +18,20 @@ use Shasoft\DbSchema\Column\ColumnString;
 use Shasoft\DbSchema\Column\ColumnBoolean;
 use Shasoft\DbSchema\Command\DefaultValue;
 
-#[Comment('Таблица с изменениями')]
+#[Title('Таблица с изменениями')]
 #[Migration('2011-11-11T12:00:00+03:00')]
-#[Comment('Таблица для тестов изменений')]
+#[Title('Таблица для тестов изменений')]
 class AllMigrations
 {
     // Колонка
-    #[Comment('Идентификатор')]
+    #[Title('Идентификатор')]
     protected ColumnId $id;
     // Колонка
     #[Migration('2012-12-12T12:00:00+03:00')]
     #[DefaultValue('Имя')]
     #[Migration('2013-12-14T12:00:00+03:00')]
     #[DefaultValue]
-    #[Comment('Колонка с именем')]
+    #[Title('Колонка с именем')]
     #[Migration('2017-12-12T12:00:00+03:00')]
     #[Name('Imj')]
     #[Migration('2018-12-12T12:00:00+03:00')]

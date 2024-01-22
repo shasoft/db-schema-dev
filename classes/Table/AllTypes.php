@@ -8,7 +8,7 @@ use Shasoft\DbSchemaDev\EnumDefault;
 use Shasoft\DbSchema\Command\Enum;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\MaxValue;
 use Shasoft\DbSchema\Command\MinValue;
 use Shasoft\DbSchema\Command\Variable;
@@ -26,7 +26,7 @@ use Shasoft\DbSchema\Column\ColumnDecimal;
 use Shasoft\DbSchema\Column\ColumnInteger;
 use Shasoft\DbSchema\Column\ColumnDatetime;
 
-#[Comment('Таблица всех типов данных')]
+#[Title('Таблица всех типов данных')]
 class AllTypes
 {
     #[MinValue(0)]

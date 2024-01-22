@@ -10,7 +10,7 @@ use Shasoft\DbSchema\Command\Create;
 use Shasoft\DbSchema\Index\IndexKey;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\MaxValue;
 use Shasoft\DbSchema\Command\MinValue;
 use Shasoft\DbSchema\Column\ColumnReal;
@@ -21,29 +21,29 @@ use Shasoft\DbSchema\Column\ColumnBoolean;
 use Shasoft\DbSchema\Command\DefaultValue;
 
 // Комментарий таблицы
-#[Comment('Таблица для примера')]
+#[Title('Таблица для примера')]
 class TabExample1
 {
-    #[Comment('Идентификатор')]
+    #[Title('Идентификатор')]
     protected ColumnId $id;
-    #[Comment('Имя')]
+    #[Title('Имя')]
     protected ColumnString $name;
     #[Migration('2023-12-28T22:00:00+03:00')]
-    #[Comment('Фамилия')]
+    #[Title('Фамилия')]
     protected ColumnString $fam;
     // Первичный ключ
     #[Columns('id')]
     protected IndexPrimary $pkKey;
 }
 // Комментарий таблицы при создании
-#[Comment('Таблица для примера')]
+#[Title('Таблица для примера')]
 // Изменим комментарий таблицы
 #[Migration('2001-01-01T00:00:00+03:00')]
-#[Comment('Таблица-пример')]
+#[Title('Таблица-пример')]
 class TabExample2
 {
     //-- Колонка добавляется вместе с созданием таблицы
-    #[Comment('Идентификатор')]
+    #[Title('Идентификатор')]
     protected ColumnId $id;
     //-- Добавим колонку
     #[Migration('2002-01-01T00:00:00+03:00')]
@@ -54,7 +54,7 @@ class TabExample2
     //-- Изменим колонку
     #[Migration('2003-01-01T00:00:00+03:00')]
     //-- Добавим комментарий    
-    #[Comment('Колонка с именем')]
+    #[Title('Колонка с именем')]
     //-- Изменим колонку
     #[Migration('2004-01-01T00:00:00+03:00')]
     // Изменим имя колонки    

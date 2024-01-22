@@ -11,7 +11,7 @@ use Shasoft\DbSchema\Command\Create;
 use Shasoft\DbSchema\Index\IndexKey;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
-use Shasoft\DbSchema\Command\Comment;
+use Shasoft\DbSchema\Command\Title;
 use Shasoft\DbSchema\Command\TypeFrom;
 use Shasoft\DbSchema\Tests\EnumString;
 use Shasoft\DbSchema\Column\ColumnEnum;
@@ -30,9 +30,9 @@ use Shasoft\DbSchema\Command\DefaultValue;
 use Shasoft\DbSchema\Column\ColumnTypeFrom;
 use Shasoft\DbSchema\Command\AutoIncrement;
 
-#[Comment('Тестовая таблица')]
+#[Title('Тестовая таблица')]
 //#[Migration('2011-11-11T12:00:00+03:00')]
-//#[Comment('Таблица для тестов')]
+//#[Title('Таблица для тестов')]
 class TabTest
 {
     //#[AutoIncrement]
@@ -43,6 +43,6 @@ class TabTest
     protected Reference $refId2;
     #[ReferenceTo(self::class, 'id')]
     //#[Migration('2011-11-11T12:00:00+03:00')]
-    //#[Comment('Ссылка на поле')]
+    //#[Title('Ссылка на поле')]
     protected Reference $refId;
 }

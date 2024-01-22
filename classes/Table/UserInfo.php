@@ -8,8 +8,6 @@ use Shasoft\DbSchemaDev\Table\User;
 use Shasoft\DbSchema\Column\ColumnId;
 use Shasoft\DbSchema\Command\Columns;
 use Shasoft\DbSchema\Command\Title;
-use Shasoft\DbSchema\Command\MaxValue;
-use Shasoft\DbSchema\Command\MinValue;
 use Shasoft\DbSchema\Column\ColumnText;
 use Shasoft\DbSchema\Command\MaxLength;
 use Shasoft\DbSchema\Command\Migration;
@@ -26,36 +24,31 @@ use Shasoft\DbSchema\Column\ColumnInteger;
 use Shasoft\DbSchema\Command\DbSchemaType;
 use Shasoft\DbSchema\Column\ColumnDatetime;
 use Shasoft\DbSchema\Command\NumberOfSpaces;
+use Shasoft\DbSchema\Relation\RelationOneToOne;
 use Shasoft\DbSchema\Relation\RelationManyToOne;
 use Shasoft\DbSchema\Relation\RelationOneToMany;
 
 //#[Migration('2010-01-18T12:00:00+03:00')]
-#[Title('Статьи')]
-class Article
+#[Title('Информация о пользователе')]
+class UserInfo
 {
     //
     #[Title('Идентификатор')]
     protected ColumnId $id;
-    #[Title('Ссылка на автора')]
+    #[Title('Ссылка на пользователя')]
     #[ReferenceTo(User::class, 'id')]
     protected Reference $userId;
-    #[Title('Название')]
+    #[Title('Описание')]
     #[MinLength(8)]
-    #[MaxLength(64)]
-    #[NumberOfSpaces(6)]
-    protected ColumnString $title;
-    #[Title('Дата создания')]
-    protected ColumnDatetime $createAt;
-    #[Title('Рейтинг')]
-    #[MinValue(0)]
-    #[MaxValue(1000000)]
-    protected ColumnInteger $rate;
+    #[MaxLength(128)]
+    #[NumberOfSpaces(10)]
+    protected ColumnString $description;
     #[Columns('id')]
     protected IndexPrimary $pkId;
     // Отношение
     #[RelTableTo(User::class)]
-    #[RelNameTo('articles')]
+    #[RelNameTo('userInfo')]
     #[Columns(['userId' => 'id'])]
-    #[Title('Автор')]
-    protected RelationManyToOne $author;
+    #[Title('Пользователь')]
+    protected RelationOneToOne $user;
 }
